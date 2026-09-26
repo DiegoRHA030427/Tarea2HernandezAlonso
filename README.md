@@ -1,5 +1,13 @@
 # Catálogo Interactivo de UI (Edición NFL)
 
+## Datos del alumno
+
+- **Nombre:** Diego Raymundo Hernández Alonso
+- **Boleta:** 2022361124
+- **Grupo:** 7CV4
+- **Materia:** Desarrollo de Aplicaciones Móviles Nativas
+- **Profesor:** Gabriel Hurtado Avilés
+
 Catálogo de componentes de interfaz de usuario, con temática de la NFL, implementado en tres tecnologías distintas para comparar cómo se resuelve el mismo catálogo en cada una:
 
 - **`android-views`** — Android nativo con Views y XML (Kotlin + `BottomNavigationView` + `FragmentManager`).
