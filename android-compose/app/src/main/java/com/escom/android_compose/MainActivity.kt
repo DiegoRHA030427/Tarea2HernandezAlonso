@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -47,7 +49,11 @@ fun CatalogoNFL() {
     // Estado mutable simple que controla qué sección se muestra (sin Navigation Component).
     var pantallaActual by remember { mutableStateOf(Pantalla.DRAFT_CONTRATOS) }
 
+    // Estado compartido del SnackbarHost, usado por la Sección 3 como variante de Toast.
+    val estadoSnackbar = remember { SnackbarHostState() }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(estadoSnackbar) },
         bottomBar = {
             NavigationBar {
                 NavigationBarItem(
@@ -89,7 +95,7 @@ fun CatalogoNFL() {
             when (pantallaActual) {
                 Pantalla.DRAFT_CONTRATOS -> PantallaDraftContratos()
                 Pantalla.MARCADOR_ACCIONES -> PantallaMarcadorAcciones()
-                Pantalla.AJUSTES_JUEGO -> PantallaAjustesJuego()
+                Pantalla.AJUSTES_JUEGO -> PantallaAjustesJuego(estadoSnackbar)
                 Pantalla.ROSTER_EQUIPO -> PantallaRosterEquipo()
                 Pantalla.RESUMEN_PARTIDO -> PantallaResumenPartido()
                 Pantalla.FORMACIONES -> PantallaFormaciones()

@@ -1,7 +1,6 @@
 package com.escom.android_compose
 
 import android.app.DatePickerDialog
-import android.widget.Toast
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,12 +16,14 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Slider
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,13 +31,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.escom.android_compose.ui.theme.AzulMarinoEquipo
 import com.escom.android_compose.ui.theme.VerdeCampo
+import kotlinx.coroutines.launch
 import java.util.Calendar
 
 // Sección 3: Ajustes del Juego. Checkboxes de clima, RadioButtons de cuarto,
 // un Switch, un Slider para la línea de yardaje y un selector de fecha.
+// La confirmación final usa el SnackbarHost del Scaffold principal, como
+// variante de Toast dentro del mismo catálogo.
 @Composable
-fun PantallaAjustesJuego() {
+fun PantallaAjustesJuego(estadoSnackbar: SnackbarHostState) {
     val contexto = LocalContext.current
+    val alcanceCorutina = rememberCoroutineScope()
     val calendario = remember { Calendar.getInstance() }
 
     var climaSoleado by remember { mutableStateOf(false) }
@@ -146,11 +151,11 @@ fun PantallaAjustesJuego() {
                     "Nieve".takeIf { climaNieve }
                 ).joinToString(", ").ifEmpty { "sin clima" }
                 val transmision = if (transmisionEnVivo) "En vivo" else "Sin transmisión"
-                Toast.makeText(
-                    contexto,
-                    "Ajustes del juego aplicados: $clima · $cuartoSeleccionado · $transmision",
-                    Toast.LENGTH_LONG
-                ).show()
+                alcanceCorutina.launch {
+                    estadoSnackbar.showSnackbar(
+                        "Ajustes del juego aplicados: $clima · $cuartoSeleccionado · $transmision"
+                    )
+                }
             },
             colors = ButtonDefaults.buttonColors(containerColor = AzulMarinoEquipo),
             modifier = Modifier.fillMaxWidth()
