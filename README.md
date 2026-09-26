@@ -17,7 +17,7 @@ Las 6 secciones son las mismas en las tres tecnologías. Como el menú de navega
 5. **Resumen del Partido** — tarjeta tipo boleto de partido, barra de progreso como reloj de juego, mensaje emergente de tiempo fuera y diálogo de confirmación para retar una jugada.
 6. **Formaciones** — filas, columnas y cajas simulando posiciones del campo, con una barra superior propia titulada "NFL UI Catalog" y scroll general.
 
-## Tabla de equivalencias (Instructivo, Paso 6)
+## Tabla de equivalencias
 
 | Elemento | Views / XML | Jetpack Compose | Flutter |
 |---|---|---|---|
