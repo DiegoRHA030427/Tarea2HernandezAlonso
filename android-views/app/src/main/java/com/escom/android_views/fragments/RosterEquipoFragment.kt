@@ -1,17 +1,17 @@
 package com.escom.android_views.fragments
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.escom.android_views.DatosGlobales
 import com.escom.android_views.R
 
-// Sección 4: Roster del Equipo. Lista vertical con al menos 15 posiciones fijas
+// Sección 4: Roster del Equipo. RecyclerView con al menos 15 posiciones fijas
 // más los jugadores que se hayan reclutado en la Sección 1 (lista global).
 class RosterEquipoFragment : Fragment() {
 
@@ -33,7 +33,7 @@ class RosterEquipoFragment : Fragment() {
         "S - Profundo"
     )
 
-    private lateinit var contenedorRoster: LinearLayout
+    private val adaptador = RosterAdapter()
 
     override fun onCreateView(
         inflador: LayoutInflater,
@@ -41,7 +41,9 @@ class RosterEquipoFragment : Fragment() {
         estadoGuardado: Bundle?
     ): View {
         val vista = inflador.inflate(R.layout.fragment_roster_equipo, contenedor, false)
-        contenedorRoster = vista.findViewById(R.id.contenedor_roster)
+        val listaRoster = vista.findViewById<RecyclerView>(R.id.lista_roster)
+        listaRoster.layoutManager = LinearLayoutManager(requireContext())
+        listaRoster.adapter = adaptador
         return vista
     }
 
@@ -49,33 +51,42 @@ class RosterEquipoFragment : Fragment() {
     // reclutados en la Sección 1 aparecen sin necesidad de volver a crear el Fragment.
     override fun onResume() {
         super.onResume()
-        actualizarListaRoster()
+        val jugadores = rosterBase.map { it to false } + DatosGlobales.jugadoresDraft.map { it to true }
+        adaptador.actualizar(jugadores)
+    }
+}
+
+// Adaptador simple: cada fila muestra el nombre del jugador y, si fue
+// reclutado en el Draft, un fondo dorado distinto.
+private class RosterAdapter : RecyclerView.Adapter<RosterAdapter.RosterViewHolder>() {
+
+    private var jugadores = listOf<Pair<String, Boolean>>()
+
+    class RosterViewHolder(val texto: TextView) : RecyclerView.ViewHolder(texto)
+
+    fun actualizar(nuevaLista: List<Pair<String, Boolean>>) {
+        jugadores = nuevaLista
+        notifyDataSetChanged()
     }
 
-    private fun actualizarListaRoster() {
-        contenedorRoster.removeAllViews()
-
-        rosterBase.forEach { posicion ->
-            contenedorRoster.addView(crearFilaRoster(posicion, esReclutado = false))
-        }
-        DatosGlobales.jugadoresDraft.forEach { jugador ->
-            contenedorRoster.addView(crearFilaRoster(jugador, esReclutado = true))
-        }
+    override fun onCreateViewHolder(padre: ViewGroup, tipoVista: Int): RosterViewHolder {
+        val texto = LayoutInflater.from(padre.context)
+            .inflate(R.layout.item_roster, padre, false) as TextView
+        return RosterViewHolder(texto)
     }
 
-    private fun crearFilaRoster(texto: String, esReclutado: Boolean): TextView {
-        return TextView(requireContext()).apply {
-            this.text = if (esReclutado) "$texto ${getString(R.string.etiqueta_reclutado)}" else texto
-            textSize = 16f
-            setPadding(16, 24, 16, 24)
-            setTextColor(resources.getColor(R.color.negro_arbitro, null))
-            setBackgroundColor(
-                if (esReclutado) {
-                    resources.getColor(R.color.dorado_equipo, null)
-                } else {
-                    Color.TRANSPARENT
-                }
-            )
+    override fun getItemCount(): Int = jugadores.size
+
+    override fun onBindViewHolder(holder: RosterViewHolder, posicion: Int) {
+        val (nombre, esReclutado) = jugadores[posicion]
+        val contexto = holder.texto.context
+        holder.texto.text = if (esReclutado) {
+            "$nombre ${contexto.getString(R.string.etiqueta_reclutado)}"
+        } else {
+            nombre
         }
+        holder.texto.setBackgroundColor(
+            contexto.getColor(if (esReclutado) R.color.dorado_equipo else android.R.color.transparent)
+        )
     }
 }

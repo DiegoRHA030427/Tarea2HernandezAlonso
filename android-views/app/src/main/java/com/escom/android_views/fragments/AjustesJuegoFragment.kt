@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.RadioGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.escom.android_views.R
 import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.slider.Slider
+import com.google.android.material.snackbar.Snackbar
 import java.util.Calendar
 
 // Sección 3: Ajustes del Juego. Checkboxes de clima, RadioButtons de cuarto,
@@ -84,10 +84,12 @@ class AjustesJuegoFragment : Fragment() {
             append(if (transmisionActiva) "En vivo" else "Sin transmisión")
         }
 
-        Toast.makeText(
-            requireContext(),
+        // Snackbar en vez de Toast para esta confirmación, como variante de
+        // "mensaje emergente" dentro del mismo catálogo.
+        Snackbar.make(
+            vista,
             "${getString(R.string.mensaje_ajustes_aplicados)}: $resumen",
-            Toast.LENGTH_LONG
+            Snackbar.LENGTH_LONG
         ).show()
     }
 }
