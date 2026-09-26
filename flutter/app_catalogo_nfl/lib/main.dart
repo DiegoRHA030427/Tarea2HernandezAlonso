@@ -101,7 +101,7 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
         selectedItemColor: verdeCampo,
         onTap: (indice) => _cambiarSeccion(_pestanas[indice]),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.sports_football), label: 'Draft'),
+          BottomNavigationBarItem(icon: Icon(Icons.person_add), label: 'Draft'),
           BottomNavigationBarItem(icon: Icon(Icons.flag), label: 'Marcador'),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Ajustes'),
           BottomNavigationBarItem(icon: Icon(Icons.groups), label: 'Roster'),

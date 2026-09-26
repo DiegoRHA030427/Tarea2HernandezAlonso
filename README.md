@@ -31,6 +31,14 @@ Las 6 secciones son las mismas en las tres tecnologías. Como el menú de navega
 | Diálogo | AlertDialog | AlertDialog | AlertDialog |
 | Barra superior | Toolbar / MaterialToolbar | TopAppBar | AppBar |
 
+## APKs listos para instalar
+
+En la carpeta [`apks/`](apks/) están los 3 instalables ya compilados, listos para `adb install` o para arrastrar al emulador:
+
+- `apks/android-views-debug.apk`
+- `apks/android-compose-debug.apk`
+- `apks/flutter-app_catalogo_nfl-release.apk` (build release; el debug de Flutter pesa >100MB por el motor de Flutter sin optimizar y no cabe en GitHub, por eso aquí se entrega el release, que además ya viene firmado con la clave de debug del proyecto y se instala igual).
+
 ## Cómo ejecutar cada proyecto
 
 ### android-views y android-compose
@@ -60,4 +68,34 @@ El APK generado queda en `build/app/outputs/flutter-apk/`.
 
 ## Capturas de pantalla
 
-_Pendiente: agregar capturas de cada sección en las tres tecnologías (Paso 7 del instructivo)._
+Todas las capturas se tomaron en un emulador Android (1080×2400) con las 3 apps instaladas, navegando las 5 pestañas del menú inferior (Draft, Marcador, Ajustes, Roster, Más) y, desde "Más", las dos secciones adicionales (Resumen del Partido y Formaciones). En cada tecnología se recluta primero al jugador "TomBrady" (#12) en la Sección 1 para comprobar que aparece automáticamente en el Roster (Sección 4).
+
+### android-views
+
+| Sección 1: Draft y Contratos | Sección 2: Marcador y Acciones | Sección 3: Ajustes del Juego |
+|---|---|---|
+| ![](docs/views_seccion1.png) | ![](docs/views_seccion2.png) | ![](docs/views_seccion3.png) |
+
+| Sección 4: Roster del Equipo | Sección 5: Resumen del Partido | Sección 6: Formaciones |
+|---|---|---|
+| ![](docs/views_seccion4.png) | ![](docs/views_seccion5.png) | ![](docs/views_seccion6.png) |
+
+### android-compose
+
+| Sección 1: Draft y Contratos | Sección 2: Marcador y Acciones | Sección 3: Ajustes del Juego |
+|---|---|---|
+| ![](docs/compose_seccion1.png) | ![](docs/compose_seccion2.png) | ![](docs/compose_seccion3.png) |
+
+| Sección 4: Roster del Equipo | Sección 5: Resumen del Partido | Sección 6: Formaciones |
+|---|---|---|
+| ![](docs/compose_seccion4.png) | ![](docs/compose_seccion5.png) | ![](docs/compose_seccion6.png) |
+
+### Flutter
+
+| Sección 1: Draft y Contratos | Sección 2: Marcador y Acciones | Sección 3: Ajustes del Juego |
+|---|---|---|
+| ![](docs/flutter_seccion1.png) | ![](docs/flutter_seccion2.png) | ![](docs/flutter_seccion3.png) |
+
+| Sección 4: Roster del Equipo | Sección 5: Resumen del Partido | Sección 6: Formaciones |
+|---|---|---|
+| ![](docs/flutter_seccion4.png) | ![](docs/flutter_seccion5.png) | ![](docs/flutter_seccion6.png) |

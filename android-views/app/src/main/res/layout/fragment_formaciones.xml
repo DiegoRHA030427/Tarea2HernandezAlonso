@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/verde_campo"
-        android:title="@string/app_bar_catalogo"
+        app:title="@string/app_bar_catalogo"
         app:titleTextColor="@color/blanco_lineas" />
 
     <ScrollView
