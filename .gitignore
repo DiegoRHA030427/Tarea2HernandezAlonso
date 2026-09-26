@@ -1,1 +1,9 @@
+.gradle/
+build/
+.idea/
+*.iml
 CLAUDE.md
+local.properties
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
