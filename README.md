@@ -107,3 +107,12 @@ Todas las capturas se tomaron en un emulador Android (1080×2400) con las 3 apps
 | Sección 4: Roster del Equipo | Sección 5: Resumen del Partido | Sección 6: Formaciones |
 |---|---|---|
 | ![](docs/flutter_seccion4.png) | ![](docs/flutter_seccion5.png) | ![](docs/flutter_seccion6.png) |
+
+### Conclusion
+
+En conclusión, este proyecto me ayudó a poner en práctica varios conceptos de desarrollo de aplicaciones móviles, principalmente al realizar la misma aplicación utilizando Android Views, Jetpack Compose y Flutter. Durante el desarrollo pude trabajar con interfaces, navegación, validaciones y manejo de datos, además de conocer un poco mejor las diferencias entre cada tecnología.
+
+También fue útil poder comparar las tres formas de desarrollar la aplicación, ya que aunque el resultado es similar, cada una tiene una manera diferente de trabajar. En general, considero que el proyecto me permitió reforzar mis conocimientos y entender mejor cómo se construye una aplicación móvil de principio a fin.
+
+
+
