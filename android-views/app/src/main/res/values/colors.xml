@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta NFL -->
+    <color name="verde_campo">#FF2E7D32</color>
+    <color name="verde_campo_claro">#FF66BB6A</color>
+    <color name="blanco_lineas">#FFFFFFFF</color>
+    <color name="negro_arbitro">#FF212121</color>
+    <color name="amarillo_penalti">#FFFFC107</color>
+
+    <!-- Acentos de equipo, para usarse directamente en botones/tarjetas de fases posteriores -->
+    <color name="azul_marino_equipo">#FF0B1F3A</color>
+    <color name="rojo_equipo">#FFD32F2F</color>
+    <color name="dorado_equipo">#FFC9A227</color>
 </resources>

@@ -1,3 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">android-views</string>
+
+    <string name="titulo_draft_contratos">Draft y Contratos</string>
+    <string name="titulo_marcador_acciones">Marcador y Acciones</string>
+    <string name="titulo_ajustes_juego">Ajustes del Juego</string>
+    <string name="titulo_roster_equipo">Roster del Equipo</string>
+    <string name="titulo_resumen_partido">Resumen del Partido</string>
+    <string name="titulo_formaciones">Formaciones</string>
+    <string name="titulo_mas">Más</string>
+
+    <!-- Etiquetas cortas para el menú de navegación inferior -->
+    <string name="menu_draft">Draft</string>
+    <string name="menu_marcador">Marcador</string>
+    <string name="menu_ajustes">Ajustes</string>
+    <string name="menu_roster">Roster</string>
+
+    <!-- Sección 1: Draft y Contratos -->
+    <string name="hint_nombre_jugador">Nombre del jugador</string>
+    <string name="hint_numero_jugador">Número de camiseta (1-99)</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="hint_salario">Salario anual ($)</string>
+    <string name="boton_draft">Seleccionar Jugador (Draft)</string>
+    <string name="error_nombre_requerido">🚩 Pañuelo amarillo: el nombre es obligatorio</string>
+    <string name="error_numero_invalido">🚩 Pañuelo amarillo: número inválido (1-99)</string>
+    <string name="mensaje_jugador_reclutado">%1$s fue reclutado al equipo</string>
+
+    <!-- Sección 2: Marcador y Acciones -->
+    <string name="boton_touchdown">Touchdown (+6)</string>
+    <string name="boton_field_goal">Field Goal (+3)</string>
+    <string name="boton_punto_extra">Punto Extra (+1)</string>
+    <string name="mensaje_touchdown">¡TOUCHDOWN! Se anotan 6 puntos</string>
+    <string name="mensaje_field_goal">Field Goal bueno: +3 puntos</string>
+    <string name="mensaje_punto_extra">Punto extra anotado: +1 punto</string>
+    <string name="mensaje_silbato">🟨 Silbato del árbitro: jugada detenida</string>
+
+    <!-- Sección 3: Ajustes del Juego -->
+    <string name="etiqueta_clima">Clima del partido</string>
+    <string name="clima_soleado">Soleado</string>
+    <string name="clima_lluvia">Lluvia</string>
+    <string name="clima_nieve">Nieve</string>
+    <string name="etiqueta_cuarto">Cuarto actual</string>
+    <string name="cuarto_1">1er Cuarto</string>
+    <string name="cuarto_2">2do Cuarto</string>
+    <string name="cuarto_3">3er Cuarto</string>
+    <string name="cuarto_4">4to Cuarto</string>
+    <string name="etiqueta_transmision">Transmisión en vivo</string>
+    <string name="etiqueta_linea_yardaje">Línea de yardaje</string>
+    <string name="formato_linea_yardaje">Línea de yardaje: %1$d yardas</string>
+    <string name="etiqueta_dia_partido">Día del partido</string>
+    <string name="boton_elegir_fecha">Elegir fecha</string>
+    <string name="formato_dia_partido">Día del partido: %1$02d/%2$02d/%3$d</string>
+    <string name="boton_aplicar_ajustes">Aplicar Ajustes</string>
+    <string name="mensaje_ajustes_aplicados">Ajustes del juego aplicados</string>
+
+    <!-- Sección 4: Roster del Equipo -->
+    <string name="etiqueta_reclutado">(Reclutado en Draft)</string>
+
+    <!-- Sección 5: Resumen del Partido -->
+    <string name="boleto_titulo">BOLETO OFICIAL DE PARTIDO</string>
+    <string name="boleto_equipos">Halcones Dorados vs Lobos Azules</string>
+    <string name="boleto_marcador">Marcador: 21 - 17</string>
+    <string name="etiqueta_reloj_juego">Reloj de juego</string>
+    <string name="boton_avanzar_reloj">Avanzar Reloj</string>
+    <string name="boton_tiempo_fuera">Tiempo Fuera</string>
+    <string name="mensaje_tiempo_fuera">⏱️ Tiempo fuera solicitado por el equipo</string>
+    <string name="boton_retar_jugada">Retar Jugada (Challenge)</string>
+    <string name="dialogo_reto_titulo">Bandera de Reto</string>
+    <string name="dialogo_reto_mensaje">¿El entrenador confirma el reto de la última jugada?</string>
+    <string name="dialogo_reto_confirmar">Confirmar</string>
+    <string name="dialogo_reto_cancelar">Cancelar</string>
+    <string name="mensaje_reto_confirmado">🚩 Reto confirmado: se revisa la jugada</string>
+    <string name="mensaje_reto_cancelado">Reto cancelado por el entrenador</string>
+
+    <!-- Sección 6: Formaciones -->
+    <string name="app_bar_catalogo">NFL UI Catalog</string>
+    <string name="etiqueta_formacion">Formación ofensiva: I-Formation</string>
 </resources>

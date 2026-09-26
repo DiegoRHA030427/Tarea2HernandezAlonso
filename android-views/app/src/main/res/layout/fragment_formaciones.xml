@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/verde_campo"
+        android:title="@string/app_bar_catalogo"
+        app:titleTextColor="@color/blanco_lineas" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/verde_campo"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/blanco_lineas"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="@string/titulo_formaciones" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/blanco_lineas"
+                android:text="@string/etiqueta_formacion" />
+
+            <!-- Columna que representa el campo completo (equivalente a Column) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Fila de receptores (equivalente a Row) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@color/dorado_equipo"
+                            android:gravity="center"
+                            android:textColor="@color/negro_arbitro"
+                            android:textStyle="bold"
+                            android:text="WR" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@color/dorado_equipo"
+                            android:gravity="center"
+                            android:textColor="@color/negro_arbitro"
+                            android:textStyle="bold"
+                            android:text="TE" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- Línea ofensiva (equivalente a Row de 5 Box) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/azul_marino_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:text="LT" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/azul_marino_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:text="LG" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/azul_marino_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:text="C" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/azul_marino_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:text="RG" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/azul_marino_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:text="RT" />
+
+                </LinearLayout>
+
+                <!-- Mariscal de campo (equivalente a Box centrado) -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:background="@color/rojo_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:textStyle="bold"
+                        android:text="QB" />
+                </FrameLayout>
+
+                <!-- Corredor detrás del QB (equivalente a Box centrado) -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:background="@color/rojo_equipo"
+                        android:gravity="center"
+                        android:textColor="@color/blanco_lineas"
+                        android:textStyle="bold"
+                        android:text="RB" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

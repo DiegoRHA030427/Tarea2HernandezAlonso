@@ -1,8 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Androidviews" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/verde_campo</item>
+        <item name="colorOnPrimary">@color/blanco_lineas</item>
+
+        <item name="colorSecondary">@color/negro_arbitro</item>
+        <item name="colorOnSecondary">@color/blanco_lineas</item>
+
+        <item name="colorError">@color/amarillo_penalti</item>
+        <item name="colorOnError">@color/negro_arbitro</item>
+
+        <item name="android:colorBackground">@color/blanco_lineas</item>
+        <item name="colorOnBackground">@color/negro_arbitro</item>
+        <item name="colorSurface">@color/blanco_lineas</item>
+        <item name="colorOnSurface">@color/negro_arbitro</item>
     </style>
 
     <style name="Theme.Androidviews" parent="Base.Theme.Androidviews" />

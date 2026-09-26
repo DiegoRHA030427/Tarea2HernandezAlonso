@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_lineas">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/negro_arbitro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="@string/titulo_marcador_acciones" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/boton_touchdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/verde_campo"
+            android:text="@string/boton_touchdown" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/boton_field_goal"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/boton_field_goal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/boton_punto_extra"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/boton_punto_extra" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/boton_silbato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/amarillo_penalti"
+            android:tint="@color/negro_arbitro"
+            android:src="@drawable/ic_silbato"
+            android:contentDescription="@string/mensaje_silbato" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Balón de fútbol americano (silueta ovalada) -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M20,12 C20,14.762 16.418,17 12,17 C7.582,17 4,14.762 4,12 C4,9.238 7.582,7 12,7 C16.418,7 20,9.238 20,12 Z" />
+</vector>

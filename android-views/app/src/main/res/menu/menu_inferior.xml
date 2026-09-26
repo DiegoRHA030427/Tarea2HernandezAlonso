@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_draft_contratos"
+        android:icon="@drawable/ic_draft"
+        android:title="@string/menu_draft" />
+    <item
+        android:id="@+id/menu_marcador_acciones"
+        android:icon="@drawable/ic_marcador"
+        android:title="@string/menu_marcador" />
+    <item
+        android:id="@+id/menu_ajustes_juego"
+        android:icon="@drawable/ic_ajustes"
+        android:title="@string/menu_ajustes" />
+    <item
+        android:id="@+id/menu_roster_equipo"
+        android:icon="@drawable/ic_roster"
+        android:title="@string/menu_roster" />
+    <item
+        android:id="@+id/menu_mas"
+        android:icon="@drawable/ic_mas"
+        android:title="@string/titulo_mas" />
+</menu>
