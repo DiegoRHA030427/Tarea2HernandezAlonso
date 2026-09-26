@@ -69,7 +69,7 @@ El APK generado queda en `app/build/outputs/apk/debug/`.
 
 ```
 cd flutter/app_catalogo_nfl
-flutter build apk --debug
+flutter build apk
 ```
 
 El APK generado queda en `build/app/outputs/flutter-apk/`.
